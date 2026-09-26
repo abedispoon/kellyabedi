@@ -1,0 +1,15 @@
+/* ===== css/header.css — En-tête sticky, navigation, boutons (.btn), menu burger ===== */
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(77,14,31,.72);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid var(--ln)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+.brand{font-weight:700;font-size:1.2rem;text-decoration:none;white-space:nowrap}.brand span{color:var(--sg)}
+nav ul{display:flex;gap:16px;list-style:none;margin:0;padding:0;font-size:.88rem}
+nav ul a{text-decoration:none;color:var(--mt);opacity:.85;padding:4px 0;border-bottom:2px solid transparent;transition:.2s}
+nav ul a:hover,nav ul a.cur{opacity:1;border-color:var(--sg);color:var(--tx)}
+.btn{display:inline-block;background:var(--ac);color:var(--tx);padding:10px 22px;border-radius:999px;text-decoration:none;font-weight:700;font-size:.9rem;border:1.5px solid var(--ac);cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s;font-family:Lato}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.35)}
+.btn.o{background:transparent;border-color:var(--sg);color:var(--sg)}.btn.o:hover{background:var(--sg);color:var(--bg)}
+.btn.sm{padding:7px 14px;font-size:.8rem}
+.dl{display:flex;gap:8px}.mdl{display:none}
+#burger{display:none;background:none;border:1px solid var(--ln);color:var(--tx);border-radius:10px;padding:6px 12px;font-size:1.1rem;cursor:pointer}
+@media(max-width:1240px){#burger{display:block}.dl{display:none}nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);padding:16px 20px;border-bottom:1px solid var(--ln);gap:12px}nav ul.open{display:flex}.mdl{display:flex;gap:8px;flex-wrap:wrap}}
